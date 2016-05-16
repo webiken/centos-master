@@ -1,5 +1,5 @@
 install
-url --url http://mirrors.sonic.net/centos/7.2.1511/os/x86_64/
+url --url http://10.0.0.10/centos7/
 lang en_US.UTF-8
 keyboard us
 timezone --utc America/New_York

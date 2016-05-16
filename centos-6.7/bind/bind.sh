@@ -1,3 +1,6 @@
+#!/bin/bash
+set -e
+
 yum install bind bind-utils -y
 
 mkdir -p /etc/named/zones

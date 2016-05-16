@@ -1,3 +1,6 @@
+#!/bin/bash
+set -e
+
 yum install -y dhcp
 
 IPADDR=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'`
