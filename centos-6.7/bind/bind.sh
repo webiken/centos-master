@@ -30,9 +30,9 @@ cat <<EOF >> /etc/named/zones/db.burhaniya.sd
 ; name servers - NS records
     IN      NS      master.burhaniya.sd.
 
-master.burhaniya.sd.       IN      A       10.0.0.10
-ns1.burhaniya.sd.          IN      A       10.0.0.10
-ns2.burhaniya.sd.          IN      A       10.0.0.11
+master.burhaniya.sd.       IN      A       10.0.0.25
+ns1.burhaniya.sd.          IN      A       10.0.0.25
+ns2.burhaniya.sd.          IN      A       10.0.0.26
 EOF
 
 cat <<EOF >> /etc/named/zones/db.0.10
@@ -47,8 +47,8 @@ $TTL    604800
        IN      NS      master.burhaniya.sd.
 
 10.0   IN      PTR     master.burhaniya.sd.    ; 10.0.0.10
-10.0   IN      PTR     ns1.burhaniya.sd.    ; 10.0.0.10
-11.0   IN      PTR     ns2.burhaniya.sd.    ; 10.0.0.11
+10.0   IN      PTR     ns1.burhaniya.sd.    ; 10.0.0.25
+11.0   IN      PTR     ns2.burhaniya.sd.    ; 10.0.0.26
 EOF
 
 cat <<EOF >> /etc/named.conf
@@ -67,7 +67,7 @@ acl "trusted" {
 
 
 options {
-	listen-on port 53 { 127.0.0.1; 10.0.0.10; 10.0.0.11; };
+	listen-on port 53 { 127.0.0.1; 10.0.0.25; 10.0.0.26; };
 	#listen-on-v6 port 53 { ::1; };
 	directory 	"/var/named";
 	dump-file 	"/var/named/data/cache_dump.db";
