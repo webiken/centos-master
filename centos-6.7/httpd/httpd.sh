@@ -43,5 +43,7 @@ kernel-firmware
 wget
 sudo
 perl
+net-tools
+vim
 %end
 EOF
