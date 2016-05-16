@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-
+systemctl disable firewalld
 yum -y install httpd
 mkdir -p /var/www/html/ks
 
