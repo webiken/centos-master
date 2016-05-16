@@ -24,7 +24,7 @@ MENU TITLE PXE Menu
 LABEL CentOS 7.2 x86 NO KS eth0
         MENU LABEL CentOS 7.2
         KERNEL images/centos/x86_64/7/vmlinuz
-        APPEND ks=http://10.0.0.10/ks/default initrd=images/centos/x86_64/7/initrd.img ramdisk_size=100000
+        APPEND ks=http://$IPADDR/ks/default initrd=images/centos/x86_64/7/initrd.img ramdisk_size=100000
 EOF
 
 chkconfig tftp on
